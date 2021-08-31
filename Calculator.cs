@@ -26,28 +26,30 @@ namespace C_
             Console.Write("Please Inpit Number 2: ");
             num2 = Convert.ToSingle(Console.ReadLine());
 
-            if(calculationType == "Multiply" || calculationType == "multiply" || calculationType == "Multiplication" || calculationType == "multiplication")
+            calculationType = calculationType.ToLower();
+
+            if(calculationType == "multiply" || calculationType == "multiplication")
             {
                 float result = num1 * num2;
                 Console.Write("The result is " +  result);
             }
             else
             {
-                if(calculationType == "Adding" || calculationType == "adding" ||calculationType == "Addition" || calculationType == "addition")
+                if(calculationType == "adding" || calculationType == "addition")
                 {
                     float result = num1 + num2;
                     Console.Write("The result is " +  result);
                 }
                 else
                 {
-                    if(calculationType == "Subtracting" || calculationType == "subtracting" || calculationType == "Subtraction" || calculationType == "subtraction")
+                    if(calculationType == "subtracting" || calculationType == "subtraction")
                     {
                         float result = num1 - num2;
                         Console.Write("The result is " +  result);
                     }
                     else
                     {
-                        if(calculationType == "Dividing" || calculationType == "dividing"  || calculationType == "Division" || calculationType == "division")
+                        if(calculationType == "dividing" || calculationType == "division")
                         {
                             float result = num1 / num2;
                             Console.Write("The result is " + result);
