@@ -6,12 +6,15 @@ namespace C_
     {
         static void Main(string[] args)
         {
-            Console.Title = "Program";
+            //Set The Console Name
+            Console.Title = "Calculator";
 
+            //Variables
             float num1;
             float num2;
             string calculationType;
 
+            //Input System
             Console.Write("Hi, this is an calculator.\nWhat would you like to calculate today? ");
             calculationType = Console.ReadLine();
             if(calculationType == "Help")
@@ -26,8 +29,9 @@ namespace C_
             Console.Write("Please Inpit Number 2: ");
             num2 = Convert.ToSingle(Console.ReadLine());
 
-            calculationType = calculationType.ToLower();
+            calculationType = calculationType.ToLower(); //Convert The Calculation Method To Lowercase To Make It Case Insenstive And More Compact
 
+            //Calculation
             if(calculationType == "multiply" || calculationType == "multiplication")
             {
                 float result = num1 * num2;
@@ -61,7 +65,7 @@ namespace C_
                     }
                 }
             }
-
+            //Stop The Console From Closing Upon Finishing Executing The Script
             Console.ReadKey();
         }
     }
